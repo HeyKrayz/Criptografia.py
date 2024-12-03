@@ -1,0 +1,22 @@
+print('Conversor Criptografado')
+
+def eu_tenho_sonokkj(krayz):
+    amarz = {
+        'a': 'z00000', 'b': 'z00009', 'c': 'z00090', 'd': 'z00099',
+        'e': 'z00900', 'f': 'z00909', 'g': 'z00990', 'h': 'z00999',
+        'i': 'z09000', 'j': 'z09009', 'k': 'z09090', 'l':  'z09099',
+        'm': 'z09900', 'n': 'z09909', 'o': 'z09999', 'p': 'z90000',
+        'q': 'z90009', 'r': 'z90090', 's': 'z90099', 't': 'z90900',
+        'u': 'z90909', 'v': 'z90990', 'w': 'z90999', 'x': 'z99000',
+        'y': 'z99009', 'z': 'z99090'
+    }
+    result = ''
+    for letra in krayz:
+        if letra.lower() in amarz:
+            result += amarz[letra.lower()]
+        else:
+            result += letra
+    return result
+input_foda123 = input ('digite: ')
+bapi_romet = eu_tenho_sonokkj(input_foda123)
+print ('saida: ', bapi_romet)
