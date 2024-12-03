@@ -1,0 +1,26 @@
+print('Desconversor Criptografado')
+
+def eu_tenho_sonokkj_desconvertido(criptografado):
+    amarz = {
+        'z00000': 'a', 'z00009': 'b', 'z00090': 'c', 'z00099': 'd',
+        'z00900': 'e', 'z00909': 'f', 'z00990': 'g', 'z00999': 'h',
+        'z09000': 'i', 'z09009': 'j', 'z09090': 'k', 'z09099': 'l',
+        'z09900': 'm', 'z09909': 'n', 'z09999': 'o', 'z90000': 'p',
+        'z90009': 'q', 'z90090': 'r', 'z90099': 's', 'z90900': 't',
+        'z90909': 'u', 'z90990': 'v', 'z90999': 'w', 'z99000': 'x',
+        'z99009': 'y', 'z99090': 'z'
+    }
+    result = ''
+    i = 0
+    while i < len(criptografado):
+        if criptografado[i:i+6] in amarz:
+            result += amarz[criptografado[i:i+6]]
+            i += 6
+        else:
+            result += criptografado[i]
+            i += 1
+    return result
+
+input_cripto = input('Digite a criptografia: ')
+texto_original = eu_tenho_sonokkj_desconvertido(input_cripto)
+print('Texto original: ', texto_original)
